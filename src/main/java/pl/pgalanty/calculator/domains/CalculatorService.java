@@ -7,18 +7,6 @@ import java.math.BigDecimal;
 @Service
 public class CalculatorService {
 
-    public Integer calculate(Integer[] a) {
-
-        Integer sum = 0;
-        for (Integer i : a ){
-            sum  = sum + i;
-        }
-        return sum;
-    }
-
-    public Integer calculate(Integer a, Integer b) {
-        return a+b;
-    }
 
     public BigDecimal calculate(CalculatorDTO calculatorDTO) {
 
