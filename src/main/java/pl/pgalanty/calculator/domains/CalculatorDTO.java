@@ -1,30 +1,39 @@
 package pl.pgalanty.calculator.domains;
 
+import java.math.BigDecimal;
+
 public class CalculatorDTO {
 
-    private Integer a;
-    private Integer b;
+    private BigDecimal a;
+    private BigDecimal b;
+
+    private OperationType operationType;
 
     public CalculatorDTO(){}
 
-    public CalculatorDTO(Integer a, Integer b) {
+    public CalculatorDTO(BigDecimal a, BigDecimal b, OperationType operationType) {
         this.a = a;
         this.b = b;
+        this.operationType = operationType;
     }
 
-    public Integer getA() {
+    public BigDecimal getA() {
         return a;
     }
 
-    public void setA(Integer a) {
+    public void setA(BigDecimal a) {
         this.a = a;
     }
 
-    public Integer getB() {
+    public BigDecimal getB() {
         return b;
     }
 
-    public void setB(Integer b) {
+    public void setB(BigDecimal b) {
         this.b = b;
+    }
+
+    public OperationType getOperationType() {
+        return operationType;
     }
 }

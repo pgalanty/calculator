@@ -27,9 +27,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        System.out.println("confgur ");
-        //AuthenticationProvider authenticationProvider = new TestingAuthenticationProvider();
-        //auth.authenticationProvider(authenticationProvider);
         auth.inMemoryAuthentication().withUser("user").password("password").roles("USER");
     }
 
