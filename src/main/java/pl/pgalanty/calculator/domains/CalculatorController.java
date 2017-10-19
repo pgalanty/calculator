@@ -16,4 +16,10 @@ public class CalculatorController {
         return calculatorService.calculate(calculatorDTO);
     }
 
+
+    @RequestMapping(value = "/api/calculate", method = RequestMethod.GET)
+    private Integer calculate(@RequestParam("evaluation") String s){
+        return calculatorService.calculate(s);
+    }
+
 }

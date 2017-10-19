@@ -3,10 +3,14 @@ package pl.pgalanty.calculator.domains;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class CalculatorService {
 
+
+    public static final String REG_EXP = "([\\d]+)[+-/*]([\\d]+)";
 
     public BigDecimal calculate(CalculatorDTO calculatorDTO) {
 
@@ -22,6 +26,22 @@ public class CalculatorService {
         }
 
         return null;
+    }
 
+
+    public Integer calculate(String s) {
+
+        Pattern pattern = Pattern.compile(REG_EXP);
+        Matcher matcher = pattern.matcher(s);
+        if (matcher.matches()) {
+            String first = matcher.group(1);
+            String operation = matcher.group(2);
+            String secound = matcher.group(3);
+            System.out.println(first + ", " + secound);
+        }
+
+        return 0;
+
+        /*-?\d+(?:\.\d+(?:E\d+)?)?(\s*[-+/\*]\s+-?\d+(?:\.\d+(?:E\d+)?)?)+*/
     }
 }
