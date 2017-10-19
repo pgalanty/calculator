@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 @Service
 public class CalculatorService {
 
-// some comment
+// regular expression operation handling
     public static final String REG_EXP = "([\\d]+)[+-/*]([\\d]+)";
 
     public BigDecimal calculate(CalculatorDTO calculatorDTO) {
