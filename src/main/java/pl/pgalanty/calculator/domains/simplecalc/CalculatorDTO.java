@@ -1,4 +1,4 @@
-package pl.pgalanty.calculator.domains;
+package pl.pgalanty.calculator.domains.simplecalc;
 
 import java.math.BigDecimal;
 
@@ -35,5 +35,8 @@ public class CalculatorDTO {
 
     public OperationType getOperationType() {
         return operationType;
+    }
+    public void setOperationType(String s) {
+
     }
 }
